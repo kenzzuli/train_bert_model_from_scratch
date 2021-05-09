@@ -1,0 +1,13 @@
+python run_pretraining.py --input_file=../tf_record/tf_examples_for_jap*.tfrecord  --output_dir=../pretraining_output  --do_train=True  --do_eval=True  --train_batch_size=32  --max_seq_length=128  --max_predictions_per_seq=20  --num_train_steps=1000000  --num_warmup_steps=100000  --learning_rate=2e-5  --bert_config_file=../japanese_L-12_H-768_A_12/bert_config.json
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-0.txt  --output_file=../tf_record/tf_examples_for_jap-0.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-1.txt  --output_file=../tf_record/tf_examples_for_jap-1.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-2.txt  --output_file=../tf_record/tf_examples_for_jap-2.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-3.txt  --output_file=../tf_record/tf_examples_for_jap-3.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-4.txt  --output_file=../tf_record/tf_examples_for_jap-4.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
+
+python create_pretraining_data.py --input_file=../corpus_concatenated/pretrain_data_batch-5.txt  --output_file=../tf_record/tf_examples_for_jap-5.tfrecord  --vocab_file=../japanese_L-12_H-768_A_12/vocab.txt  --do_lower_case=False  --max_seq_length=128  --max_predictions_per_seq=20  --masked_lm_prob=0.15  --random_seed=12345  --dupe_factor=5
