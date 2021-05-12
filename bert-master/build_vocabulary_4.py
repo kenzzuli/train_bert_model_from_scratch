@@ -94,7 +94,7 @@ class VocabBuilder(object):
             self.dict[token] = len(self.dict)  # dict由{UNK:0,PAD:1} --> {UNK:0,PAD:1,token:2}
 
     def save_vocab(self):
-        dict_path = "./vocab.txt"
+        dict_path = "../japanese_L-12_H-768_A_12_char/vocab.txt"
         with open(dict_path, mode="w", encoding="utf-8") as fout:
             for token in self.dict.keys():
                 fout.write(token + "\n")

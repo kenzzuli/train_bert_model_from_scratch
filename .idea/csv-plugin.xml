@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/bert-master/create_pretraining_data.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/corpus_concatenated/pretrain_data_batch-1.txt">
           <value>
             <Attribute>

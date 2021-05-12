@@ -787,9 +787,9 @@ def write_predictions(all_examples, all_features, all_results, n_best_size,
           # We could hypothetically create invalid predictions, e.g., predict
           # that the start of the span is in the question. We throw out all
           # invalid predictions.
-          if start_index >= len(feature.str_list):
+          if start_index >= len(feature.tokens):
             continue
-          if end_index >= len(feature.str_list):
+          if end_index >= len(feature.tokens):
             continue
           if start_index not in feature.token_to_orig_map:
             continue

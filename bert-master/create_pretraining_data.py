@@ -104,7 +104,7 @@ def write_instance_to_example_files(instances, tokenizer, max_seq_length,
 
     total_written = 0
     for (inst_index, instance) in enumerate(instances):
-        input_ids = tokenizer.convert_tokens_to_ids(instance.str_list)
+        input_ids = tokenizer.convert_tokens_to_ids(instance.tokens)
         input_mask = [1] * len(input_ids)
         segment_ids = list(instance.segment_ids)
         assert len(input_ids) <= max_seq_length
@@ -148,7 +148,7 @@ def write_instance_to_example_files(instances, tokenizer, max_seq_length,
         if inst_index < 20:
             tf.logging.info("*** Example ***")
             tf.logging.info("tokens: %s" % " ".join(
-                [tokenization.printable_text(x) for x in instance.str_list]))
+                [tokenization.printable_text(x) for x in instance.tokens]))
 
             for feature_name in features.keys():
                 feature = features[feature_name]
