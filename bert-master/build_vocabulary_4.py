@@ -38,7 +38,7 @@ class VocabBuilder(object):
         :param file: txt文本
         :return: ['乙', '女', 'は', 'お', '姉', 'さ', 'ま', 'に', '恋', 'し', 'て', 'る', '櫻', 'の', '園', 'の', 'エ', 'ト', 'ワ', 'ー', 'ル']
         """
-        basic_tokenizer = BasicTokenizer()
+        basic_tokenizer = BasicTokenizer(do_lower_case=False)  # 必须加上do_lower_case=False,这样じ才不会变成し
         token_list = []
         with open(file, mode="r", encoding="utf-8") as fin:
             text = fin.read()
